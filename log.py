@@ -17,7 +17,10 @@ import os
 import logging
 import logging.handlers
 
+__all__ = ["logger"]
 
+
+# 用户配置部分 ↓
 LEVEL_COLOR = {
     'DEBUG': 'cyan',
     'INFO': 'green',
@@ -29,7 +32,7 @@ STDOUT_LOG_FMT = "%(log_color)s[%(asctime)s] [%(levelname)s] [%(threadName)s] [%
 STDOUT_DATE_FMT = "%Y-%m-%d %H:%M:%S"
 FILE_LOG_FMT = "[%(asctime)s] [%(levelname)s] [%(threadName)s] [%(filename)s:%(lineno)d] %(message)s"
 FILE_DATE_FMT = "%Y-%m-%d %H:%M:%S"
-
+# 用户配置部分 ↑
 
 
 class ColoredFormatter(logging.Formatter):
